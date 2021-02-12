@@ -9,6 +9,8 @@ import { RadioButtonLabel } from '../RadioButtonLabel'
 import { ActionDialog, Dialog, MessageDialog } from '.'
 import readme from './README.md'
 
+import { DatePicker } from '../DatePicker'
+
 const DialogController: React.FC<{ themes: Theme }> = ({ themes }) => {
   const [isOpen, setIsOpen] = useState(false)
   const [value, setValue] = useState('hoge')
@@ -65,6 +67,9 @@ const DialogController: React.FC<{ themes: Theme }> = ({ themes }) => {
           </li>
           <li>
             <input name="test" value={text} onChange={(e) => onChangeText(e.currentTarget.value)} />
+          </li>
+          <li>
+            <DatePicker />
           </li>
         </DialogControllerBox>
         <DialogControllerBottom themes={themes}>
